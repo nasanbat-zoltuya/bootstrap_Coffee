@@ -1,0 +1,116 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* ===== Theme Colors ===== */
+:root {
+  --coffee-dark: #121212;
+  --coffee-accent: #d2911c;
+}
+
+/* ===== Background Image ===== */
+body {
+  background: url("image/dark.jpeg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-dark .nav-link {
+  color: #fff !important;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover,
+.navbar-dark .nav-link.active {
+  color: var(--coffee-accent) !important;
+}
+
+/* ===== Hero Section ===== */
+#menu-hero {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  text-align: center;
+}
+
+#menu-hero h1 {
+  color: var(--coffee-accent);
+  font-weight: 700;
+}
+
+#menu-hero p {
+  color: #dcdcdc;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+/* ===== Menu Section ===== */
+#menu {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+  color: var(--coffee-accent);
+  font-weight: 600;
+}
+
+.card-text {
+  color: #dcdcdc;
+}
+
+.card-img-top {
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 0.9rem;
+}
+@media(max-width:576px){
+  body{background-attachment:scroll;}
+  .hero-section,.hero,#menu-hero{padding-top:2.5rem;padding-bottom:2.5rem;}
+  .card-img-top{height:180px;}
+  img{max-width:100%;}
+  h1{font-size:1.8rem;}
+}
